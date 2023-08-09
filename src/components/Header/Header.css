@@ -1,0 +1,40 @@
+.nav-container {
+
+     background-color: #99062b41;
+     display: flex;
+     justify-content: space-between;
+     padding: 0.5vh 6vw;
+}
+
+
+.header-logo{
+
+      margin:0;
+      padding: 0;
+      width: 5vw;
+      height: 13vh;
+
+}
+
+
+.nav-list-container {
+
+     display: flex;
+     list-style-type: none;
+     gap: 4vw;
+}
+
+.nav-list-container li a {
+
+     text-decoration: none;
+     font-weight: bolder;
+     color: #000b12ef;
+     font-size: 1.7vw;
+    
+}
+
+.nav-list-container li a:hover {
+
+      color: rgba(7, 21, 177, 0.658);
+      font-weight: bold;
+}
