@@ -1,10 +1,11 @@
 import React from 'react';
 import './Cart.css';
 
-const Cart = () => {
+const Cart = ({mealsName}) => {
+    
     return (
         <div>
-            <h2>I'm from Cart</h2>
+            <h2>Added Foods</h2>
         </div>
     );
 };

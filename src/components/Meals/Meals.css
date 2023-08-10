@@ -33,6 +33,7 @@
 
      margin: 0 3vw;
      display: flex;
+     gap: 2vw;
 
 }
 
@@ -43,7 +44,10 @@
 
 .cart {
 
+     border-radius: 0.4rem;
      width: 25%;
+     background-color: #00bcd424;
+     height: auto;
    
 }
 

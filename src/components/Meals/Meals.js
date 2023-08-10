@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Meal from '../Meal/Meal';
 import Cart from '../Cart/Cart';
+import { setDataToLocalStorage } from '../../utilites/essential';
 
 const Meals = () => {
 
@@ -41,8 +42,24 @@ const Meals = () => {
 
     },[url]);
 
-   //  console.log(meals);
+//function is created for getting the clicked meal name from the user.
+let [names, setNames] = useState('');
 
+const userDesiredMealName = (props) => {
+
+    setDataToLocalStorage(props);
+    const selectedNames = JSON.parse(localStorage.getItem('meals-name'));
+     setNames(selectedNames);
+};
+
+useEffect(()=>{
+ 
+   const selectedNames = JSON.parse(localStorage.getItem('meals-name'));
+   if(selectedNames){
+      setNames(selectedNames);
+   }
+
+},[]);
 
     return (
         <div>
@@ -56,13 +73,13 @@ const Meals = () => {
               <div className='all-meals'>
 
                   {
-                     meals.map(meal => <Meal key={meal.idMeal} meal={meal}></Meal>)
+                     meals.map(meal => <Meal key={meal.idMeal} meal={meal} userDesiredMealName={userDesiredMealName}></Meal>)
                   }
 
               </div>
 
               <div className='cart'>
-                 <Cart></Cart>
+                 <Cart mealsName={names}></Cart>
               </div> 
 
             </div>
