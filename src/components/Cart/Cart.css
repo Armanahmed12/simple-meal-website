@@ -1,0 +1,13 @@
+.cart-info-container h2 {
+
+       text-decoration: underline;
+        color : rgb(0, 4, 255);
+}
+
+#items-container {
+
+    color: red;
+    font-weight: bold;
+    text-align: left;
+
+}

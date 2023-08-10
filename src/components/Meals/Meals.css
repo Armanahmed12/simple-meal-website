@@ -31,7 +31,7 @@
 /* meals & Cart Container */
 .mealsAndCartContainer{
 
-     margin: 0 3vw;
+     margin: 0 5vh 3vw;
      display: flex;
      gap: 2vw;
 
@@ -47,7 +47,7 @@
      border-radius: 0.4rem;
      width: 25%;
      background-color: #00bcd424;
-     height: auto;
+     height: 80vh;
    
 }
 

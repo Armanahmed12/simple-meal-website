@@ -28,7 +28,7 @@ const Meals = () => {
      })
       
   },[]);
-
+  
 // these code are written for fetching data and tried to put to meals.
   let [meals, setMeals] = useState([]);
   let url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${text}`;
@@ -79,7 +79,7 @@ useEffect(()=>{
               </div>
 
               <div className='cart'>
-                 <Cart mealsName={names}></Cart>
+                 <Cart mealsNames={names}></Cart>
               </div> 
 
             </div>
